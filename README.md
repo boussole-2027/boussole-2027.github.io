@@ -2,7 +2,7 @@
 
 Application pour la présidentielle 2027, dans l'esprit d'Elyze : on fait défiler des propositions, on glisse à droite si on est d'accord, à gauche sinon, et un classement des candidats les plus proches de ses idées se construit au fil des votes.
 
-Adresse : https://aurelienmoreau47.github.io/boussole-2027/
+Adresse : https://boussole-2027.github.io/
 
 ## Données
 

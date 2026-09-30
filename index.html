@@ -277,7 +277,7 @@ const expressed = () => Object.entries(state.votes).filter(([id,v]) => v !== 0 &
 const nKnown = () => Object.keys(state.votes).filter(id => byId[id]).length;
 
 /* Code de transfert : tous les votes (y compris ceux gardés de côté) sous forme « B27.<base64 de id=vote,...> ». */
-const PREFIX = "B27.", SITE = "https://aurelienmoreau47.github.io/boussole-2027/";
+const PREFIX = "B27.", SITE = "https://boussole-2027.github.io/";
 const exportCode = () => PREFIX + btoa(Object.entries(state.votes).map(([id,v]) => id + "=" + v).join(","));
 function parseCode(txt){
   const s = String(txt || "").replace(/\s+/g, "");
@@ -620,7 +620,7 @@ document.addEventListener("keydown", e => {
 if(ARTEFACT){
   const nb = document.getElementById("notice");
   nb.innerHTML = `<div class="notice"><button class="nclose" id="noticeHide" aria-label="Masquer">✕</button><b>La Boussole a sa propre adresse</b>
-    <p><a href="${SITE}" target="_blank" rel="noopener">aurelienmoreau47.github.io/boussole-2027</a>, à installer sur ton téléphone. Pour y retrouver tes votes : copie ton code ici, puis colle-le dans l'onglet Méthode de la nouvelle adresse.</p>
+    <p><a href="${SITE}" target="_blank" rel="noopener">boussole-2027.github.io</a>, à installer sur ton téléphone. Pour y retrouver tes votes : copie ton code ici, puis colle-le dans l'onglet Méthode de la nouvelle adresse.</p>
     <button class="btn" id="noticeCopy">Copier mon code</button><div id="noticeZone"></div></div>`;
   document.getElementById("noticeCopy").onclick = () => copyCode(document.getElementById("noticeZone"));
   document.getElementById("noticeHide").onclick = () => nb.hidden = true;
